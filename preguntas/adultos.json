@@ -1,0 +1,345 @@
+{
+  "titulo": "Jeopardy: Educación Financiera - Estudio A",
+  "subtitulo": "La Película de tu Vida: Branch A vs Branch B (personas adultas)",
+  "descripcion": "Preguntas de vida diaria para público adulto general, sin tecnicismos. Las de $100 son las más fáciles y las de $500 tienen un poco más de reto.",
+  "instrucciones_formato": "Cada pregunta tiene 4 opciones: 'opcion_branch_b' es SIEMPRE la correcta; 'opcion_branch_a' y las dos de 'distractores' son incorrectas. El juego las mezcla en orden aleatorio en cada partida.",
+  "categorias": [
+    {
+      "nombre": "🎬 El guion de la quincena",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "¿Para qué sirve hacer un presupuesto de la quincena?",
+          "opcion_branch_b": "Para saber cuánto entra, cuánto sale y en qué se va",
+          "opcion_branch_a": "Para justificar compras que ya hiciste",
+          "distractores": [
+            "Solo sirve a quien gana mucho dinero",
+            "Para que el banco te dé más crédito"
+          ],
+          "respuesta": "Un presupuesto es tu plan de dinero: anotas lo que ganas y lo que gastas para decidir antes de que el dinero se vaya.",
+          "reflexion_ia": "Toda buena película tiene guion. Tu presupuesto es el guion de tu quincena: tú decides la historia antes de filmarla."
+        },
+        {
+          "puntos": 200,
+          "pregunta": "Al cobrar la quincena, ¿qué gastos conviene pagar primero?",
+          "opcion_branch_b": "Renta, comida, luz, agua y transporte",
+          "opcion_branch_a": "Lo que esté en oferta ese fin de semana",
+          "distractores": [
+            "Las salidas con amigos",
+            "Una suscripción nueva de streaming"
+          ],
+          "respuesta": "Primero se cubren los gastos básicos para vivir y trabajar. Lo que sobra se reparte entre ahorro, deudas y gustos.",
+          "reflexion_ia": "Branch B en una frase: primero lo que necesitas, después lo que quieres."
+        },
+        {
+          "puntos": 300,
+          "pregunta": "Ganas $8,000 a la quincena y tus gastos fijos son $6,500. ¿Cuánto te queda?",
+          "opcion_branch_b": "$1,500",
+          "opcion_branch_a": "$2,500",
+          "distractores": [
+            "$500",
+            "$14,500"
+          ],
+          "respuesta": "8,000 − 6,500 = 1,500 pesos. Ese margen es para ahorrar, pagar deudas y darte algún gusto.",
+          "reflexion_ia": "Conocer tu margen te da el control: sabes cuánto puedes ahorrar sin quedarte corto."
+        },
+        {
+          "puntos": 400,
+          "pregunta": "¿Qué son los \"gastos hormiga\"?",
+          "opcion_branch_b": "Gastos pequeños y diarios que juntos suman mucho",
+          "opcion_branch_a": "Gastos que no importan porque son baratos",
+          "distractores": [
+            "Compras que solo se hacen en el mercado",
+            "Los pagos que se hacen a plazos"
+          ],
+          "respuesta": "Un café, unas papitas o un refresco diario parecen poco, pero al mes pueden sumar cientos de pesos.",
+          "reflexion_ia": "Las escenas cortas también cuentan en la película. Revisa tus gastos hormiga y encontrarás dinero para ahorrar."
+        },
+        {
+          "puntos": 500,
+          "pregunta": "Una guía popular para repartir el ingreso es la regla 50-30-20. ¿Qué significa?",
+          "opcion_branch_b": "50% necesidades, 30% gustos y 20% ahorro o deudas",
+          "opcion_branch_a": "50% gustos, 30% necesidades y 20% ahorro",
+          "distractores": [
+            "50% ahorro, 30% deudas y 20% necesidades",
+            "Todo a necesidades y el ahorro solo si sobra"
+          ],
+          "respuesta": "La regla 50-30-20 sugiere: la mitad para lo necesario, 30% para gustos y 20% para ahorrar o pagar deudas. Es una guía y se puede ajustar a cada familia.",
+          "reflexion_ia": "No hace falta seguir la regla al pie de la letra: lo importante es que el ahorro tenga su lugar desde el principio."
+        }
+      ]
+    },
+    {
+      "nombre": "🛒 ¿Necesidad o antojo?",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "¿Cuál de estos gastos es una NECESIDAD?",
+          "opcion_branch_b": "El pago de la luz",
+          "opcion_branch_a": "Un celular nuevo cuando el tuyo funciona",
+          "distractores": [
+            "Una pantalla más grande",
+            "Ropa de marca para una fiesta"
+          ],
+          "respuesta": "Una necesidad es algo indispensable para vivir o trabajar. Lo demás son deseos: se valen, pero después de lo básico.",
+          "reflexion_ia": "Distinguir entre necesidad y antojo es la primera decisión de un buen productor de su propia vida."
+        },
+        {
+          "puntos": 200,
+          "pregunta": "Antes de una compra grande que se te antojó de repente, ¿qué ayuda más?",
+          "opcion_branch_b": "Esperar uno o dos días antes de decidir",
+          "opcion_branch_a": "Comprar ya, antes de que se acabe la oferta",
+          "distractores": [
+            "Pagarla con tarjeta para no sentirlo",
+            "Preguntarle al vendedor si te conviene"
+          ],
+          "respuesta": "Esperar un poco enfría el impulso. Si después de uno o dos días sigues queriéndolo y te alcanza, la decisión es más segura.",
+          "reflexion_ia": "Las ofertas \"solo por hoy\" están hechas para que no pienses. Darte tiempo es tu mejor escena."
+        },
+        {
+          "puntos": 300,
+          "pregunta": "Si compras un refresco de $20 todos los días, ¿cuánto gastas en un mes de 30 días?",
+          "opcion_branch_b": "$600",
+          "opcion_branch_a": "$200",
+          "distractores": [
+            "$60",
+            "$2,000"
+          ],
+          "respuesta": "20 × 30 = 600 pesos al mes, y unos 7,300 al año. Los gastos diarios pequeños pesan mucho.",
+          "reflexion_ia": "Multiplicar un gasto diario por 30 es un truco sencillo para ver su tamaño real."
+        },
+        {
+          "puntos": 400,
+          "pregunta": "En el súper, ¿qué te ayuda más a no gastar de más?",
+          "opcion_branch_b": "Llevar lista y comparar el precio por kilo o litro",
+          "opcion_branch_a": "Ir con hambre para comprar todo de una vez",
+          "distractores": [
+            "Comprar siempre la presentación más grande",
+            "Elegir lo que está a la altura de los ojos"
+          ],
+          "respuesta": "La lista evita compras de impulso y comparar el precio por kilo o litro muestra cuál conviene de verdad. Lo grande no siempre es más barato.",
+          "reflexion_ia": "Ir al súper con lista es como filmar con guion: se gasta menos y sale mejor."
+        },
+        {
+          "puntos": 500,
+          "pregunta": "Te aumentan el sueldo. ¿Qué evita que ese aumento \"se esfume\"?",
+          "opcion_branch_b": "Subir el ahorro antes de subir los gastos",
+          "opcion_branch_a": "Cambiar de inmediato a un celular o auto más caro",
+          "distractores": [
+            "Gastarlo todo, al cabo ya te lo ganaste",
+            "No decirle a nadie para que no te pidan"
+          ],
+          "respuesta": "Si los gastos suben al mismo ritmo que el sueldo, nunca sobra. Apartar primero una parte del aumento para ahorrar evita que se pierda.",
+          "reflexion_ia": "Ganar más es una gran escena; ahorrar parte de ese aumento es lo que mejora el final de la película."
+        }
+      ]
+    },
+    {
+      "nombre": "☂️ Ahorro y emergencias",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "¿Qué es un fondo de emergencia?",
+          "opcion_branch_b": "Dinero apartado solo para imprevistos",
+          "opcion_branch_a": "Dinero para las vacaciones",
+          "distractores": [
+            "Un préstamo que da el gobierno",
+            "Lo que sobra al final del mes"
+          ],
+          "respuesta": "Es un ahorro que solo se usa para imprevistos: una enfermedad, una reparación urgente o quedarse sin trabajo.",
+          "reflexion_ia": "El fondo de emergencia es tu paraguas: no lo usas diario, pero cuando llueve te salva."
+        },
+        {
+          "puntos": 200,
+          "pregunta": "¿Dónde conviene guardar el fondo de emergencia?",
+          "opcion_branch_b": "En una cuenta segura de la que puedas sacarlo rápido",
+          "opcion_branch_a": "En criptomonedas, para que crezca rápido",
+          "distractores": [
+            "En una tanda que termina dentro de un año",
+            "Prestado a un familiar"
+          ],
+          "respuesta": "El fondo de emergencia debe estar seguro y disponible pronto. No conviene arriesgarlo ni dejarlo donde no puedas sacarlo a tiempo.",
+          "reflexion_ia": "En una emergencia lo que cuenta es tener el dinero a la mano, no que haya ganado mucho."
+        },
+        {
+          "puntos": 300,
+          "pregunta": "Si ahorras $500 cada mes, ¿cuánto juntas en un año?",
+          "opcion_branch_b": "$6,000",
+          "opcion_branch_a": "$5,000",
+          "distractores": [
+            "$1,200",
+            "$60,000"
+          ],
+          "respuesta": "500 × 12 = 6,000 pesos. Ahorrar una cantidad fija cada mes da resultados.",
+          "reflexion_ia": "Ahorrar es una serie, no una película de un solo día: cada capítulo suma."
+        },
+        {
+          "puntos": 400,
+          "pregunta": "¿Cuánto se recomienda juntar en un fondo de emergencia?",
+          "opcion_branch_b": "Lo de 3 a 6 meses de gastos básicos",
+          "opcion_branch_a": "Lo de una semana de gastos",
+          "distractores": [
+            "Nada, si ya tienes tarjeta de crédito",
+            "Exactamente mil pesos"
+          ],
+          "respuesta": "Lo recomendable es juntar entre 3 y 6 meses de gastos básicos. Se puede empezar poco a poco: cualquier cantidad ayuda.",
+          "reflexion_ia": "No tienes que juntarlo en un mes. Lo importante es empezar y no detenerte."
+        },
+        {
+          "puntos": 500,
+          "pregunta": "Usaste tu fondo de emergencia para una reparación. ¿Qué sigue?",
+          "opcion_branch_b": "Volver a llenarlo antes de otros gastos no urgentes",
+          "opcion_branch_a": "Celebrar que salió bien y seguir gastando igual",
+          "distractores": [
+            "Pedir un préstamo para rellenarlo de inmediato",
+            "Ya no ahorrar, porque la emergencia ya pasó"
+          ],
+          "respuesta": "Después de usarlo, el fondo se vuelve a llenar con prioridad. Así estarás preparado para el siguiente imprevisto.",
+          "reflexion_ia": "Las emergencias no avisan. Reponer el fondo es preparar la siguiente escena."
+        }
+      ]
+    },
+    {
+      "nombre": "💳 Tarjetas y préstamos",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "¿Qué es el interés de un préstamo?",
+          "opcion_branch_b": "Lo que pagas extra por usar dinero prestado",
+          "opcion_branch_a": "Un descuento por pagar a tiempo",
+          "distractores": [
+            "Un regalo del banco por ser cliente",
+            "El dinero que te sobra al final del mes"
+          ],
+          "respuesta": "El interés es el costo de pedir prestado: además de lo que te prestaron, pagas una cantidad extra.",
+          "reflexion_ia": "Antes de pedir prestado, pregunta siempre: ¿cuánto voy a pagar en total?"
+        },
+        {
+          "puntos": 200,
+          "pregunta": "¿Qué significa ser \"totalero\" con tu tarjeta de crédito?",
+          "opcion_branch_b": "Pagar el total cada mes para no pagar intereses",
+          "opcion_branch_a": "Usar todo el límite de la tarjeta",
+          "distractores": [
+            "Tener todas las tarjetas que te ofrezcan",
+            "Pagar solo cuando llaman de cobranza"
+          ],
+          "respuesta": "Quien paga el total de lo que usó antes de la fecha límite no paga intereses. Así la tarjeta es una herramienta y no una deuda.",
+          "reflexion_ia": "Usada con orden, la tarjeta es una buena aliada. Sin orden, se vuelve la villana de la historia."
+        },
+        {
+          "puntos": 300,
+          "pregunta": "Si cada mes pagas solo el \"pago mínimo\" de tu tarjeta, ¿qué pasa?",
+          "opcion_branch_b": "La deuda baja muy lento y pagas muchos intereses",
+          "opcion_branch_a": "Ya no pagas intereses ese mes",
+          "distractores": [
+            "El banco te regala puntos extra",
+            "Tu deuda se borra en tres meses"
+          ],
+          "respuesta": "El pago mínimo casi solo cubre intereses. La deuda puede tardar años en terminarse y cuesta mucho más.",
+          "reflexion_ia": "El pago mínimo te mantiene al corriente, pero no te saca de la deuda. Siempre que puedas, paga más."
+        },
+        {
+          "puntos": 400,
+          "pregunta": "¿Cuándo convienen los \"meses sin intereses\"?",
+          "opcion_branch_b": "Si la compra es necesaria y las mensualidades caben en tu presupuesto",
+          "opcion_branch_a": "Siempre, porque no cuestan nada",
+          "distractores": [
+            "Para comprar varias cosas a la vez",
+            "Cuando ya tienes otras deudas atrasadas"
+          ],
+          "respuesta": "Los meses sin intereses ayudan con compras necesarias si puedes pagar cada mensualidad. Juntar muchas compras así puede ahogar tu presupuesto.",
+          "reflexion_ia": "Cada mensualidad es una escena que ya está filmada en tus próximos meses. Que no se te junten."
+        },
+        {
+          "puntos": 500,
+          "pregunta": "Para comparar créditos se usa el CAT (Costo Anual Total). ¿Qué te dice?",
+          "opcion_branch_b": "Cuánto cuesta el crédito al año, con intereses y comisiones",
+          "opcion_branch_a": "Cuánto dinero te van a prestar",
+          "distractores": [
+            "Cuántos meses tienes para pagar",
+            "Qué tan rápido te aprueban el crédito"
+          ],
+          "respuesta": "El CAT junta intereses, comisiones y otros cargos en un solo porcentaje. Entre dos créditos parecidos, conviene el de CAT más bajo.",
+          "reflexion_ia": "No te fijes solo en que la mensualidad se vea chiquita: el CAT te dice el costo real."
+        }
+      ]
+    },
+    {
+      "nombre": "🔒 Cuida tu dinero y tu futuro",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "Te llaman \"del banco\" y te piden el código que te llegó por mensaje. ¿Qué haces?",
+          "opcion_branch_b": "Cuelgo y no comparto ese código con nadie",
+          "opcion_branch_a": "Se lo doy para no perder mi cuenta",
+          "distractores": [
+            "Le doy solo la mitad del código",
+            "Le pido que me llame más tarde para dárselo"
+          ],
+          "respuesta": "El banco nunca te pide códigos, NIP ni contraseñas por teléfono. Si te los piden, es un intento de fraude.",
+          "reflexion_ia": "En esta película, tus contraseñas y códigos son secretos de producción: no se comparten con nadie."
+        },
+        {
+          "puntos": 200,
+          "pregunta": "Una app te presta dinero en minutos, pero pide acceso a tus contactos y fotos. ¿Qué conviene?",
+          "opcion_branch_b": "No usarla: puede ser un fraude o cobrar con amenazas",
+          "opcion_branch_a": "Aceptar, porque el dinero llega rápido",
+          "distractores": [
+            "Aceptar y borrar la app después",
+            "Darle permiso solo a las fotos"
+          ],
+          "respuesta": "Las apps que piden acceso a contactos y fotos suelen usarlos para presionar o amenazar. Busca préstamos solo en instituciones autorizadas.",
+          "reflexion_ia": "Lo rápido puede salir carísimo. Antes de aceptar dinero fácil, revisa quién te lo está ofreciendo."
+        },
+        {
+          "puntos": 300,
+          "pregunta": "¿Qué es la Afore?",
+          "opcion_branch_b": "La cuenta donde se junta tu ahorro para el retiro",
+          "opcion_branch_a": "Un préstamo para cuando te jubiles",
+          "distractores": [
+            "Un seguro para tu automóvil",
+            "Una tarjeta de crédito del gobierno"
+          ],
+          "respuesta": "La Afore administra tu cuenta para el retiro. Ahí llegan aportaciones si tienes empleo formal y también puedes hacer ahorro voluntario.",
+          "reflexion_ia": "El final de la película también se planea. Revisar tu Afore hoy cuida a tu yo del futuro."
+        },
+        {
+          "puntos": 400,
+          "pregunta": "Te prometen duplicar tu dinero en un mes \"sin riesgo\". ¿Qué es lo más probable?",
+          "opcion_branch_b": "Que sea un fraude: si suena demasiado bueno, desconfía",
+          "opcion_branch_a": "Que es una oportunidad que no hay que dejar pasar",
+          "distractores": [
+            "Que es una inversión respaldada por el gobierno",
+            "Que es normal si te lo recomienda un conocido"
+          ],
+          "respuesta": "Ninguna inversión seria promete ganancias enormes sin riesgo. Las promesas de duplicar el dinero rápido son señal de fraude.",
+          "reflexion_ia": "Las tramas demasiado perfectas suelen tener truco. Con tu dinero, desconfía de los finales mágicos."
+        },
+        {
+          "puntos": 500,
+          "pregunta": "Si ahorras desde joven, ¿por qué te ayuda el interés compuesto?",
+          "opcion_branch_b": "Porque los intereses también generan intereses con el tiempo",
+          "opcion_branch_a": "Porque el banco te regala dinero cada año",
+          "distractores": [
+            "Porque el interés sube entre menos ahorras",
+            "Porque solo funciona con cantidades muy grandes"
+          ],
+          "respuesta": "Con el interés compuesto, las ganancias se suman al ahorro y también generan ganancias. Por eso el tiempo es tan importante.",
+          "reflexion_ia": "El mejor momento para empezar a ahorrar fue ayer; el segundo mejor momento es hoy."
+        }
+      ]
+    }
+  ],
+  "final_jeopardy": {
+    "categoria": "🎬 EL CORTE FINAL: LA DECISIÓN MAESTRA",
+    "pregunta": "Cobraste la quincena. ¿Qué orden te ayuda a que el dinero alcance y a vivir más tranquilo?",
+    "opcion_branch_b": "Primero lo básico, luego ahorro y deudas, y al final los gustos",
+    "opcion_branch_a": "Primero los gustos y después ver si alcanza para lo demás",
+    "distractores": [
+      "Pagar solo la tarjeta y dejar lo básico para después",
+      "Guardar todo y nunca gastar nada en mí"
+    ],
+    "respuesta_esperada": "El orden de Branch B: primero los gastos básicos, después el ahorro y el pago de deudas, y al final los gustos. Así el dinero alcanza, estás preparado para imprevistos y también disfrutas sin culpa.",
+    "reflexion_ia": "En la película de tu vida, tú eres quien produce y dirige. Cada peso que usas es una decisión de tu historia. Si eliges primero lo necesario, luego el ahorro y después los gustos, tendrás la tranquilidad y la libertad para filmar todas las historias que sueñes. ¡Felicidades por completar el reto de Estudio A!"
+  }
+}

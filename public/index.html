@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeopardy: Educación Financiera - Estudio A</title>
+  <link rel="stylesheet" href="host.css?v=5">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Top Navigation Header -->
+    <header class="top-header">
+      <div class="header-brand">
+        <!-- Logo UACM superior izquierdo -->
+        <img src="img/logo-uacm.png" alt="Logo UACM" class="header-logo logo-uacm" id="logo-uacm">
+        <div class="title-area">
+          <span class="game-badge">🎬 EL SET DE CINE: ACTIVACIÓN INTERACTIVA</span>
+          <h1>JEOPARDY: EDUCACIÓN FINANCIERA - ESTUDIO A</h1>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Logo Coordinación Académica en header -->
+        <img src="img/logo-ca.png" alt="Logo Coordinación Académica" class="header-logo logo-ca" id="logo-ca">
+        <button id="btn-audience" class="btn btn-info" title="Cambiar el público (niños o adultos)">
+          👥 Público
+        </button>
+        <button id="btn-show-qr" class="btn btn-primary" title="Mostrar Código QR para conectar celulares">
+          📱 Código QR
+        </button>
+        <button id="btn-copy-link" class="btn btn-info" title="Copiar enlace para celular o chat">
+          📋 Copiar Link
+        </button>
+        <button id="btn-final-jeopardy" class="btn btn-final" title="Ronda Final Jeopardy">
+          🏆 Final Jeopardy
+        </button>
+        <button id="btn-end-game" class="btn btn-podium" title="Finalizar partida y ver Podio">
+          👑 Podio y Ganador
+        </button>
+        <button id="btn-sound-toggle" class="btn btn-icon" title="Silenciar / Activar sonido FX">
+          🔊
+        </button>
+        <button id="btn-fullscreen" class="btn btn-icon" title="Pantalla Completa">
+          ⛶
+        </button>
+        <button id="btn-reset" class="btn btn-icon btn-danger" title="Reiniciar Tablero y Puntos">
+          🔄
+        </button>
+      </div>
+    </header>
+
+    <!-- Connection Bar -->
+    <div class="connection-bar">
+      <div class="conn-item">
+        <span class="conn-dot"></span>
+        <span id="conn-status-text">Conectando al servidor...</span>
+      </div>
+      <div class="conn-item">
+        <span>👥 Participantes registrados: <strong id="team-count">0</strong></span>
+      </div>
+      <div class="conn-item url-display">
+        <span>Link para celulares: <strong id="active-url-text" title="Clic para copiar">Cargando enlace...</strong></span>
+      </div>
+    </div>
+
+    <!-- Main Jeopardy Board -->
+    <main class="board-container">
+      <div class="board-grid" id="board-grid">
+        <!-- Generado dinámicamente desde host.js -->
+      </div>
+    </main>
+
+    <!-- Bottom Scoreboard -->
+    <footer class="scoreboard-footer">
+      <div class="scoreboard-title">MARCADOR EN VIVO:</div>
+      <div class="teams-container" id="teams-container">
+        <div class="empty-teams-msg">Esperando a que los participantes escaneen el código QR...</div>
+      </div>
+    </footer>
+
+    <!-- MODAL INICIAL DE INSTRUCCIONES (Abre automáticamente al cargar la página) -->
+    <div id="intro-modal" class="modal-overlay">
+      <div class="modal-content intro-modal-box">
+        <div class="intro-scroll">
+        <div class="intro-header">
+          <h2>🎬 Reglas de Educación Financiera</h2>
+          <p class="intro-lead">¡Bienvenidas y bienvenidos al set! Hoy vas a producir <strong>la película de tu vida</strong> y tendrás que decidir cómo usar tu dinero. Hay dos caminos:</p>
+        </div>
+
+        <div class="intro-branches">
+          <!-- Bloque 1 (Rojo): Branch A -->
+          <div class="branch-block branch-block-red">
+            <div class="branch-icon">⚠️</div>
+            <div class="branch-content">
+              <h3>Branch A: Primero lo que QUIERO</h3>
+              <p>Gastar en antojos y caprichos antes de lo importante… ¡y luego ya no alcanza para terminar la película!</p>
+            </div>
+          </div>
+
+          <!-- Bloque 2 (Verde): Branch B -->
+          <div class="branch-block branch-block-green">
+            <div class="branch-icon">✅</div>
+            <div class="branch-content">
+              <h3>Branch B: Primero lo que NECESITO</h3>
+              <p>Primero lo importante (comida, materiales y un ahorro para emergencias) y después los gustos. ¡Así la película llega al estreno!</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="server-warning" class="server-warning hidden">
+          <strong>⚠️ El juego no está conectado al servidor.</strong>
+          Esta página se abrió sin el servidor de Node (por ejemplo, con doble clic en <code>index.html</code> o con Live Server), así que los celulares no pueden conectarse.
+          Para jugar: abre una terminal en la carpeta del proyecto, ejecuta <code>npm install</code> y luego <code>node server.js</code>, y entra a <strong>http://localhost:3000</strong>. En internet, usa tu enlace de Render.
+        </div>
+
+        <div class="intro-howto">
+          <h3>📱 ¿Cómo se juega?</h3>
+          <ul>
+            <li>Escanea el código QR con tu celular y escribe <strong>tu nombre</strong> (si alguien ya lo usa, agrega una inicial).</li>
+            <li>Escucha la pregunta y mira las <strong>4 opciones de colores</strong>. Solo una es correcta.</li>
+            <li>Cuando aparezca <strong>¡YA!</strong> tienes <strong>40 segundos</strong> (niñas y niños) o <strong>30 segundos</strong> (personas adultas) para tocar tu respuesta. Si aciertas, ¡entre más rápido, más puntos!</li>
+            <li>Equivocarte no te quita puntos. Las preguntas de $100 son fáciles y las de $500 son un reto. ¡Gana quien junte más puntos!</li>
+          </ul>
+        </div>
+
+        </div>
+
+        <div class="intro-footer">
+          <p class="audience-question">¿Quién va a jugar? Elige el público para empezar:</p>
+          <div class="audience-choices">
+            <button class="btn btn-start-game btn-audience-choice" data-audience="ninos">
+              <span class="aud-icon">👧🧒</span>
+              <span class="aud-text"><strong>Niñas y niños</strong><small data-time>6 a 12 años · 40 s por pregunta</small></span>
+            </button>
+            <button class="btn btn-start-game btn-audience-choice aud-adults" data-audience="adultos">
+              <span class="aud-icon">🧑</span>
+              <span class="aud-text"><strong>Personas adultas</strong><small data-time>Vida diaria · 30 s por pregunta</small></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL DE PREGUNTA (MODO KAHOOT: 4 OPCIONES EN LOS CELULARES) -->
+    <div id="question-modal" class="modal-overlay hidden">
+      <div class="modal-content question-modal-box">
+        <div class="modal-header">
+          <span id="modal-category" class="badge-category">Categoría</span>
+          <span id="modal-points" class="badge-points">Hasta 100 pts</span>
+        </div>
+
+        <div class="modal-body">
+          <!-- Pregunta -->
+          <p id="modal-question-text" class="question-text">Texto de la pregunta...</p>
+
+          <!-- Estado: tiempo y respuestas recibidas -->
+          <div id="round-status" class="round-status state-preview">
+            <div class="round-timer" id="round-timer">
+              <svg viewBox="0 0 44 44" aria-hidden="true">
+                <circle class="ring-bg" cx="22" cy="22" r="19"></circle>
+                <circle class="ring-fg" id="timer-ring" cx="22" cy="22" r="19"></circle>
+              </svg>
+              <span id="timer-number">40</span>
+            </div>
+            <div class="round-status-info">
+              <h3 id="round-headline">Lean y escuchen la pregunta</h3>
+              <p id="round-subtext">Usa "🔊 Leer en voz alta". Cuando estén listos, presiona "Iniciar" y los celulares se desbloquean.</p>
+            </div>
+            <div class="answer-counter">
+              <span class="answer-counter-num"><span id="answer-count">0</span><small>/<span id="answer-total">0</span></small></span>
+              <span class="answer-counter-label">respuestas</span>
+            </div>
+          </div>
+
+          <!-- Las 4 opciones -->
+          <div id="options-grid" class="options-grid hidden"></div>
+
+          <!-- Resultado: respuesta correcta explicada + los más rápidos -->
+          <div id="reveal-panel" class="reveal-panel hidden">
+            <div class="guide-box">
+              <div class="guide-header"><strong>💡 Respuesta correcta explicada:</strong></div>
+              <p id="modal-answer-text" class="answer-text"></p>
+            </div>
+            <div class="fastest-box">
+              <div class="fastest-header">⚡ Más puntos en esta pregunta</div>
+              <ol id="fastest-list" class="fastest-list"></ol>
+            </div>
+          </div>
+
+          <!-- Caja de Reflexión IA (Leída en voz alta con Web Speech API) -->
+          <div id="ai-reflection-box" class="ai-reflection-box hidden">
+            <div class="ai-reflection-header">
+              <span>🤖 Reflexión IA (Pedagógica):</span>
+              <span id="speaking-indicator" class="speaking-indicator hidden">🔊 Hablando...</span>
+            </div>
+            <p id="modal-reflection-text" class="ai-reflection-text"></p>
+          </div>
+        </div>
+
+        <!-- Controles para el docente -->
+        <div class="modal-controls">
+          <button id="btn-read-aloud" class="btn btn-action btn-read">
+            🔊 Leer en voz alta <span class="hotkey">[L]</span>
+          </button>
+          <button id="btn-start-answering" class="btn btn-action btn-activate">
+            ▶️ Iniciar (40 s) <span class="hotkey">[Espacio]</span>
+          </button>
+          <button id="btn-end-answering" class="btn btn-action btn-reveal" disabled>
+            ⏹️ Cerrar respuestas
+          </button>
+          <!-- Botón Reflexión IA: Con voz en español latino (disponible al revelar la respuesta) -->
+          <button id="btn-ia-reflection" class="btn btn-action btn-ia" disabled>
+            🤖 Reflexión IA
+          </button>
+          <!-- Botón Volver al Tablero: Cierra modal y ejecuta window.speechSynthesis.cancel() -->
+          <button id="btn-close-modal" class="btn btn-action btn-close">
+            Volver al Tablero <span class="hotkey">[Esc]</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL CÓDIGO QR -->
+    <div id="qr-modal" class="modal-overlay hidden">
+      <div class="modal-content qr-modal-box">
+        <h2>📱 Conéctate desde tu Celular</h2>
+        <p>Apunta con la cámara de tu smartphone para abrir el pulsador:</p>
+        <div class="qr-image-wrapper">
+          <img id="qr-code-img" src="" alt="Código QR Pulsador Móvil">
+        </div>
+        <div class="qr-url-box">
+          <input type="text" id="qr-url-input" readonly>
+          <button id="btn-copy-qr-url" class="btn btn-primary">Copiar</button>
+        </div>
+        <button id="btn-close-qr" class="btn btn-action btn-close">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- MODAL PODIO DE CAMPEONES -->
+    <div id="podium-modal" class="modal-overlay hidden">
+      <canvas id="confetti-canvas"></canvas>
+      <div class="modal-content podium-modal-box">
+        <div class="podium-header">
+          <div class="crown-icon">👑</div>
+          <h2>¡PODIO DE CAMPEONES!</h2>
+          <p>Estudio A: Educación Financiera - La Película de tu Vida</p>
+        </div>
+
+        <div class="podium-body">
+          <div class="podium-stage" id="podium-stage"></div>
+          <div class="other-teams-list" id="other-teams-list"></div>
+        </div>
+
+        <div class="modal-controls">
+          <button id="btn-close-podium" class="btn btn-action btn-close">Cerrar Podio</button>
+          <button id="btn-new-game" class="btn btn-action btn-primary">🔄 Nueva Partida</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script src="host.js?v=5"></script>
+</body>
+</html>

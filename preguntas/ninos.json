@@ -1,0 +1,345 @@
+{
+  "titulo": "Jeopardy: Educación Financiera - Estudio A",
+  "subtitulo": "La Película de tu Vida: Branch A vs Branch B (edición familiar)",
+  "descripcion": "Juego para niñas y niños de 6 a 12 años y personas adultas. Las preguntas de $100 son las más fáciles y las de $500 son un reto.",
+  "instrucciones_formato": "Cada pregunta tiene 4 opciones: 'opcion_branch_b' es SIEMPRE la correcta; 'opcion_branch_a' y las dos de 'distractores' son incorrectas. El juego las mezcla en orden aleatorio en cada partida.",
+  "categorias": [
+    {
+      "nombre": "🎬 Mi presupuesto de película",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "¿Qué es un presupuesto?",
+          "opcion_branch_b": "Un plan para decidir en qué usar tu dinero",
+          "opcion_branch_a": "Una lista de todo lo que quieres comprar ya",
+          "distractores": [
+            "Un billete especial que usan los directores de cine",
+            "El dinero que encuentras en el sillón"
+          ],
+          "respuesta": "Un presupuesto es un plan: antes de gastar, decides cuánto dinero tienes y en qué lo vas a usar.",
+          "reflexion_ia": "Hasta las películas más famosas empiezan con un plan. Si planeas tu dinero, tú eres quien dirige la historia."
+        },
+        {
+          "puntos": 200,
+          "pregunta": "Antes de gastar el dinero para filmar tu película, ¿qué conviene hacer primero?",
+          "opcion_branch_b": "Hacer una lista de lo que sí necesitas para filmar",
+          "opcion_branch_a": "Comprar lo primero que veas en la tienda",
+          "distractores": [
+            "Gastarlo rápido antes de que se pierda",
+            "Preguntarle a la cámara qué quiere de regalo"
+          ],
+          "respuesta": "Primero se hace la lista de lo necesario (cámara, actores, escenario). Así el dinero alcanza para terminar la película.",
+          "reflexion_ia": "Una buena lista es como un guion para tu dinero: te dice qué sigue y evita sorpresas."
+        },
+        {
+          "puntos": 300,
+          "pregunta": "Tienes $100 para tu película. La cámara cuesta $60 y los disfraces $30. ¿Cuánto dinero te queda?",
+          "opcion_branch_b": "$10",
+          "opcion_branch_a": "$40",
+          "distractores": [
+            "$30",
+            "¡Me alcanza para una limusina!"
+          ],
+          "respuesta": "60 + 30 = 90 pesos gastados. 100 − 90 = 10 pesos. ¡Te quedan $10!",
+          "reflexion_ia": "Hacer cuentas antes de comprar te dice si te alcanza. Los números también son parte del equipo de filmación."
+        },
+        {
+          "puntos": 400,
+          "pregunta": "A mitad de la película ya gastaste casi todo tu dinero. ¿Qué hace un buen productor?",
+          "opcion_branch_b": "Revisa en qué gastó y deja de comprar lo que no hace falta",
+          "opcion_branch_a": "Sigue gastando igual y espera que alcance",
+          "distractores": [
+            "Pide más dinero sin revisar en qué se fue",
+            "Termina la película a la mitad y dice que así es el final"
+          ],
+          "respuesta": "Cuando el dinero se acaba rápido, hay que revisar los gastos y quitar lo que no es necesario para poder terminar.",
+          "reflexion_ia": "Detenerse a revisar no es fracasar: es lo que hacen los grandes productores para que la película llegue al estreno."
+        },
+        {
+          "puntos": 500,
+          "pregunta": "¿Por qué conviene anotar cada peso que entra y que sale de tu proyecto?",
+          "opcion_branch_b": "Para saber cuánto te queda y no quedarte sin dinero a la mitad",
+          "opcion_branch_a": "Para presumir a tus amigos cuánto dinero tienes",
+          "distractores": [
+            "Porque así los billetes se multiplican solos",
+            "No sirve de nada: con acordarse es suficiente"
+          ],
+          "respuesta": "Anotar entradas y salidas de dinero (el flujo de caja) te avisa a tiempo si el dinero se está acabando.",
+          "reflexion_ia": "Tu libreta de cuentas es como el mapa del set: sin ella es fácil perderse."
+        }
+      ]
+    },
+    {
+      "nombre": "🍿 ¿Lo necesito o lo quiero?",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "¿Cuál de estas cosas es una NECESIDAD?",
+          "opcion_branch_b": "Agua para tomar",
+          "opcion_branch_a": "Un videojuego nuevo",
+          "distractores": [
+            "Unos tenis con lucecitas",
+            "Una corona de rey de juguete"
+          ],
+          "respuesta": "Una necesidad es algo sin lo que no podemos estar bien, como el agua, la comida o la ropa. Lo demás son gustos.",
+          "reflexion_ia": "Los gustos hacen la vida divertida, pero primero va lo que necesitamos para estar bien."
+        },
+        {
+          "puntos": 200,
+          "pregunta": "En la filmación, el equipo tiene hambre. ¿Qué compras primero?",
+          "opcion_branch_b": "Tortas y agua para todo el equipo",
+          "opcion_branch_a": "Un pastel de cinco pisos solo para la estrella",
+          "distractores": [
+            "Globos de colores para decorar el set",
+            "Lentes de sol para que todos se vean geniales"
+          ],
+          "respuesta": "La comida para todo el equipo es una necesidad: sin energía nadie puede seguir filmando.",
+          "reflexion_ia": "Un equipo bien alimentado filma mejor. Cuidar lo básico también es cuidar a las personas."
+        },
+        {
+          "puntos": 300,
+          "pregunta": "Ves un juguete que te encanta, pero no lo necesitas. ¿Qué es lo más inteligente?",
+          "opcion_branch_b": "Esperar unos días y ver si de verdad lo sigues queriendo",
+          "opcion_branch_a": "Comprarlo en ese momento con todo tu dinero",
+          "distractores": [
+            "Comprar dos para que no se acaben",
+            "Hacer berrinche hasta que alguien te lo compre"
+          ],
+          "respuesta": "Esperar unos días ayuda a saber si es un antojo del momento o algo que de verdad quieres y puedes pagar.",
+          "reflexion_ia": "Los antojos son como los cortes rápidos de una película: duran poco. Darte tiempo te ayuda a elegir mejor."
+        },
+        {
+          "puntos": 400,
+          "pregunta": "Tu película necesita una cámara. ¿Cuál es la mejor opción?",
+          "opcion_branch_b": "Una cámara sencilla que funcione bien y quepa en tu presupuesto",
+          "opcion_branch_a": "La cámara más cara de la tienda para presumirla",
+          "distractores": [
+            "Una cámara de juguete que no graba",
+            "Tres cámaras iguales, por si acaso"
+          ],
+          "respuesta": "Lo importante es que la cámara funcione y alcance el dinero para lo demás. Lo más caro no siempre es lo mejor.",
+          "reflexion_ia": "Las grandes historias no dependen del equipo más caro, sino de las buenas decisiones."
+        },
+        {
+          "puntos": 500,
+          "pregunta": "Te pagan $200 por un trabajo y tu primo te dice: \"¡Ahora sí, a gastar en todo!\". ¿Qué haría alguien con criterio Branch B?",
+          "opcion_branch_b": "Primero apartar para lo necesario y el ahorro, y luego darse un gusto",
+          "opcion_branch_a": "Darle la razón: si ganas más, gastas más",
+          "distractores": [
+            "No gastar nunca nada, ni en un gusto pequeño",
+            "Regalarlo todo para no tener que decidir"
+          ],
+          "respuesta": "Cuando ganamos más, conviene asegurar primero lo necesario y el ahorro. Después sí se vale disfrutar un gusto.",
+          "reflexion_ia": "Ganar más no significa gastar todo. El orden importa: primero lo necesario, después los gustos."
+        }
+      ]
+    },
+    {
+      "nombre": "🐷 La alcancía del set",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "¿Qué es ahorrar?",
+          "opcion_branch_b": "Guardar una parte de tu dinero para después",
+          "opcion_branch_a": "Gastar todo tu dinero el mismo día",
+          "distractores": [
+            "Pedirle dinero a alguien más",
+            "Romper la alcancía para ver si sigue ahí"
+          ],
+          "respuesta": "Ahorrar es guardar una parte del dinero hoy para usarlo después en algo importante.",
+          "reflexion_ia": "Cada moneda que guardas es una escena que estás preparando para tu futuro."
+        },
+        {
+          "puntos": 200,
+          "pregunta": "¿Dónde es más seguro guardar tus ahorros?",
+          "opcion_branch_b": "En una alcancía o en una cuenta de ahorro",
+          "opcion_branch_a": "En la bolsa del pantalón que va a la lavadora",
+          "distractores": [
+            "Debajo de una piedra en el parque",
+            "En la mochila de un amigo"
+          ],
+          "respuesta": "Una alcancía en casa o una cuenta en el banco cuidan tu dinero para que no se pierda.",
+          "reflexion_ia": "Un buen lugar para el dinero es como una buena bodega para el equipo de filmación: todo se guarda seguro."
+        },
+        {
+          "puntos": 300,
+          "pregunta": "Si ahorras $10 cada semana, ¿cuánto juntas en 4 semanas?",
+          "opcion_branch_b": "$40",
+          "opcion_branch_a": "$14",
+          "distractores": [
+            "$100",
+            "$10, porque el dinero no se suma"
+          ],
+          "respuesta": "10 + 10 + 10 + 10 = 40. ¡Ahorrando poquito cada semana se junta bastante!",
+          "reflexion_ia": "Poquito a poquito se llena la alcancía. La constancia es el superpoder del ahorro."
+        },
+        {
+          "puntos": 400,
+          "pregunta": "En plena filmación se descompone una lámpara y hay que cambiarla. ¿Qué salva tu película?",
+          "opcion_branch_b": "Tener dinero guardado para emergencias",
+          "opcion_branch_a": "Haberlo gastado todo en confeti para la fiesta",
+          "distractores": [
+            "Seguir grabando a oscuras",
+            "Esperar a que la lámpara se arregle sola"
+          ],
+          "respuesta": "Un dinero guardado para emergencias sirve justo para eso: resolver imprevistos sin detener el proyecto.",
+          "reflexion_ia": "Las sorpresas pasan en todos los sets. Quien tiene un ahorro para emergencias sigue filmando."
+        },
+        {
+          "puntos": 500,
+          "pregunta": "¿Para qué sirve un fondo de emergencia?",
+          "opcion_branch_b": "Para pagar imprevistos sin quedarte sin dinero para lo básico",
+          "opcion_branch_a": "Para comprar algo cuando te den ganas",
+          "distractores": [
+            "Para prestarle a quien te lo pida",
+            "Para no tener que volver a ahorrar nunca"
+          ],
+          "respuesta": "El fondo de emergencia es dinero apartado solo para imprevistos (una enfermedad, algo que se descompone) y se vuelve a llenar después de usarlo.",
+          "reflexion_ia": "El fondo de emergencia es tu paraguas: no lo usas todos los días, pero cuando llueve te salva."
+        }
+      ]
+    },
+    {
+      "nombre": "🤝 Prestar y pedir prestado",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "Si alguien te presta dinero, ¿qué debes hacer?",
+          "opcion_branch_b": "Devolverlo como lo prometiste",
+          "opcion_branch_a": "Gastarlo y olvidarte de él",
+          "distractores": [
+            "Esconderte cuando te lo pidan",
+            "Decir que fue un regalo"
+          ],
+          "respuesta": "Lo prestado se devuelve. Cumplir lo que prometes hace que la gente confíe en ti.",
+          "reflexion_ia": "En el set y en la vida, cumplir tu palabra es lo que hace que te quieran en el próximo proyecto."
+        },
+        {
+          "puntos": 200,
+          "pregunta": "¿Qué es una deuda?",
+          "opcion_branch_b": "Dinero que debes y tienes que regresar",
+          "opcion_branch_a": "Dinero que te regalaron",
+          "distractores": [
+            "Un premio por portarte bien",
+            "Una palabra que inventaron los piratas"
+          ],
+          "respuesta": "Una deuda es dinero que alguien te prestó y que tienes que pagar.",
+          "reflexion_ia": "Antes de pedir prestado, pregúntate: ¿podré pagarlo? Esa pregunta cuida tu tranquilidad."
+        },
+        {
+          "puntos": 300,
+          "pregunta": "Tu amigo te presta $20 y le regresas $22 por el favor. Esos $2 extra se llaman…",
+          "opcion_branch_b": "Interés",
+          "opcion_branch_a": "Propina",
+          "distractores": [
+            "Cambio",
+            "Regalo de cumpleaños"
+          ],
+          "respuesta": "El interés es lo que se paga extra por usar dinero prestado. Por eso pedir prestado cuesta.",
+          "reflexion_ia": "Pedir prestado tiene un precio. Conocerlo te ayuda a decidir si de verdad vale la pena."
+        },
+        {
+          "puntos": 400,
+          "pregunta": "Te ofrecen un juguete \"en pagos chiquitos\", pero al final pagarías el doble. ¿Qué conviene?",
+          "opcion_branch_b": "Ahorrar primero y comprarlo cuando te alcance",
+          "opcion_branch_a": "Aceptar, porque los pagos se ven chiquitos",
+          "distractores": [
+            "Comprar dos juguetes en pagos",
+            "Pedir prestado para pagar los pagos"
+          ],
+          "respuesta": "Los pagos chiquitos pueden esconder intereses altos. Ahorrar y pagar de contado sale más barato.",
+          "reflexion_ia": "Lo que parece barato en pedacitos puede salir caro al final. Haz la cuenta completa antes de decidir."
+        },
+        {
+          "puntos": 500,
+          "pregunta": "¿Cuándo puede ser buena idea pedir dinero prestado?",
+          "opcion_branch_b": "Para algo que te ayude a ganar dinero y que sí puedas pagar",
+          "opcion_branch_a": "Para comprar ropa de moda y presumirla",
+          "distractores": [
+            "Siempre que el banco te lo ofrezca",
+            "Para pagar otra deuda que ya no puedes pagar"
+          ],
+          "respuesta": "Una deuda puede ayudar si sirve para producir (como herramientas de trabajo) y si puedes pagarla. Endeudarse para presumir o para tapar otra deuda es peligroso.",
+          "reflexion_ia": "Un préstamo puede ser un buen aliado o un villano. La diferencia está en para qué lo usas y si puedes pagarlo."
+        }
+      ]
+    },
+    {
+      "nombre": "🌱 Hacer crecer mi dinero",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "Si siembras una semilla y la cuidas, crece. ¿Qué pasa con el dinero que ahorras con paciencia?",
+          "opcion_branch_b": "Se va juntando y puede crecer",
+          "opcion_branch_a": "Desaparece si no lo gastas",
+          "distractores": [
+            "Se convierte en monedas de chocolate",
+            "Se escapa volando de la alcancía"
+          ],
+          "respuesta": "El dinero ahorrado con paciencia se va juntando, y en una cuenta de ahorro hasta puede crecer un poquito más.",
+          "reflexion_ia": "Ahorrar es como sembrar: hoy no se ve mucho, pero con tiempo y cuidado da frutos."
+        },
+        {
+          "puntos": 200,
+          "pregunta": "Vendes limonada en la escuela. ¿Qué es la ganancia?",
+          "opcion_branch_b": "Lo que te queda después de pagar limones, azúcar y vasos",
+          "opcion_branch_a": "Todo el dinero que te pagaron",
+          "distractores": [
+            "Los limones que te sobraron",
+            "Lo que gastaste en el letrero"
+          ],
+          "respuesta": "La ganancia es lo que te queda después de restar lo que gastaste para hacer y vender tu limonada.",
+          "reflexion_ia": "Vender mucho no siempre es ganar mucho. La ganancia de verdad es lo que queda después de pagar los gastos."
+        },
+        {
+          "puntos": 300,
+          "pregunta": "Hacer tu película costó $50 y en la función ganaste $80. ¿Cuánto ganaste de verdad?",
+          "opcion_branch_b": "$30",
+          "opcion_branch_a": "$80",
+          "distractores": [
+            "$130",
+            "$50"
+          ],
+          "respuesta": "80 − 50 = 30. Tu ganancia real es de $30, porque primero hay que recuperar lo que gastaste.",
+          "reflexion_ia": "Saber cuánto ganaste de verdad te ayuda a decidir tu siguiente película con los pies en la tierra."
+        },
+        {
+          "puntos": 400,
+          "pregunta": "¿Cuál es una buena inversión para tu futuro?",
+          "opcion_branch_b": "Aprender cosas nuevas, como leer bien, hacer cuentas o un oficio",
+          "opcion_branch_a": "Comprar muchos dulces para comerlos hoy",
+          "distractores": [
+            "Gastar en estampas repetidas",
+            "Apostar tu domingo en un volado"
+          ],
+          "respuesta": "Aprender es una de las mejores inversiones: lo que sabes te ayuda toda la vida y nadie te lo puede quitar.",
+          "reflexion_ia": "Lo que aprendes es el mejor equipo de filmación: lo llevas contigo a todas tus películas."
+        },
+        {
+          "puntos": 500,
+          "pregunta": "El banco te paga intereses por tus ahorros, y después te paga intereses también por esos intereses. ¿Cómo se llama esto?",
+          "opcion_branch_b": "Interés compuesto",
+          "opcion_branch_a": "Dinero mágico",
+          "distractores": [
+            "Interés simple",
+            "Descuento"
+          ],
+          "respuesta": "Con el interés compuesto, los intereses también ganan intereses. Por eso ahorrar desde joven hace que el dinero crezca más.",
+          "reflexion_ia": "El tiempo es el mejor amigo del ahorro: entre más temprano empiezas, más crece tu dinero."
+        }
+      ]
+    }
+  ],
+  "final_jeopardy": {
+    "categoria": "🎬 EL CORTE FINAL: LA DECISIÓN MAESTRA",
+    "pregunta": "¡Terminaste tu película y te pagaron por ella! ¿Cuál es el orden correcto para usar tu dinero?",
+    "opcion_branch_b": "Primero lo que necesito, luego ahorro, y después me doy un gusto",
+    "opcion_branch_a": "Primero me doy gustos y luego veo si alcanza para lo demás",
+    "distractores": [
+      "Lo guardo todo y nunca me doy ningún gusto",
+      "Le pregunto a mi mascota qué hago con él"
+    ],
+    "respuesta_esperada": "El orden de Branch B: primero lo necesario, después el ahorro y al final los gustos. Así el dinero alcanza, estás preparado para imprevistos y también disfrutas.",
+    "reflexion_ia": "En la película de tu vida, tú eres quien dirige. Cada peso que usas es una decisión de tu historia. Si eliges primero lo necesario, luego el ahorro y después los gustos, tendrás para filmar todas las películas que sueñes. ¡Felicidades por completar el reto de Estudio A!"
+  }
+}

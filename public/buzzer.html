@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#07111e">
+  <title>Jugador: Educación Financiera (Estudio A)</title>
+  <link rel="stylesheet" href="buzzer.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div id="buzzer-app">
+    <!-- PANTALLA 1: REGISTRO DEL PARTICIPANTE -->
+    <div id="screen-register" class="screen">
+      <div class="register-card">
+        <div class="register-badge">🎬 ESTUDIO A: EL SET DE CINE</div>
+        <h2>¡A jugar!</h2>
+        <p>Escribe tu nombre para entrar al set de filmación:</p>
+
+        <div class="register-branches-hint">
+          <span>⚠️ <strong>Branch A:</strong> Primero lo que QUIERO</span>
+          <span>✅ <strong>Branch B:</strong> Primero lo que NECESITO</span>
+        </div>
+
+        <form id="form-register">
+          <input 
+            type="text" 
+            id="input-team-name" 
+            placeholder="Ej: Sofía M." 
+            maxlength="24" 
+            autocomplete="off" 
+            required
+          >
+          <div id="register-error" class="register-error hidden"></div>
+          <button type="submit" class="btn-join">¡Entrar a la Producción! 🎬</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- PANTALLA 2: JUEGO (4 OPCIONES) -->
+    <div id="screen-buzzer" class="screen hidden">
+      <!-- Header Móvil -->
+      <header class="buzzer-header">
+        <div class="team-badge">
+          <div id="header-avatar" class="avatar">EQ</div>
+          <div class="team-meta">
+            <span id="header-team-name" class="team-title">Mi Equipo</span>
+            <span class="score-line"><span id="header-score" class="score-display">0 pts</span> <span id="header-rank" class="rank-display"></span></span>
+          </div>
+        </div>
+        <div class="conn-badge" id="conn-badge">
+          <span class="live-dot"></span>
+          <span id="conn-text">En vivo</span>
+        </div>
+      </header>
+
+      <main class="buzzer-main">
+        <!-- Espera -->
+        <section id="panel-wait" class="panel">
+          <div class="wait-icon">🎬</div>
+          <p id="wait-text" class="wait-text">Atento a la pantalla del proyector...</p>
+        </section>
+
+        <!-- Pregunta abierta, aún sin opciones -->
+        <section id="panel-preview" class="panel hidden">
+          <span id="preview-points" class="points-chip">Hasta 100 pts</span>
+          <p id="preview-question" class="phone-question"></p>
+          <p class="get-ready">Prepárate: las opciones aparecen en un momento…</p>
+        </section>
+
+        <!-- Responder -->
+        <section id="panel-answer" class="panel panel-answer hidden">
+          <span id="answer-points" class="points-chip small-chip"></span>
+          <div id="wait-banner" class="wait-banner hidden">⏳ Escucha la pregunta… ¡espera la señal para responder!</div>
+          <div id="time-row" class="time-row">
+            <div class="time-bar"><div id="time-fill" class="time-fill"></div></div>
+            <span id="time-left" class="time-left">30</span>
+          </div>
+          <p id="answer-question" class="phone-question small"></p>
+          <div id="answer-options" class="answer-options"></div>
+          <div id="sent-notice" class="sent-notice hidden">✓ Respuesta enviada. Espera el resultado…</div>
+          <div id="answer-progress" class="answer-progress"></div>
+        </section>
+
+        <!-- Resultado -->
+        <section id="panel-result" class="panel hidden">
+          <div id="result-card" class="result-card">
+            <div id="result-icon" class="result-icon">✅</div>
+            <h2 id="result-title" class="result-title">¡Correcto!</h2>
+            <p id="result-points" class="result-points">+0 pts</p>
+            <p id="result-detail" class="result-detail"></p>
+          </div>
+          <div class="correct-box">
+            <span class="correct-label">Respuesta correcta</span>
+            <div id="result-correct" class="correct-option"></div>
+          </div>
+          <p id="result-rank" class="result-rank"></p>
+        </section>
+      </main>
+
+      <!-- Footer Info -->
+      <footer class="buzzer-footer">
+        <span>Jeopardy: Branch A vs Branch B • UACM</span>
+      </footer>
+    </div>
+
+    <!-- PANTALLA 3: PODIO FINAL -->
+    <div id="screen-podium" class="screen hidden">
+      <div class="podium-result-card">
+        <div id="podium-trophy" class="result-trophy">🏆</div>
+        <h2 id="podium-status-title">¡PRODUCCIÓN FINALIZADA!</h2>
+        <div id="podium-my-rank" class="my-rank-badge rank-gold">1º LUGAR</div>
+        <p id="podium-my-team" class="my-team-name">Mi Equipo</p>
+        <p id="podium-my-score" class="my-team-score">1,500 pts</p>
+        <div id="podium-my-msg" class="podium-msg">¡Demostraron la mejor disciplina y criterio en Educación Financiera!</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Inicialización de Socket.IO con reconexión persistente e infinita
+    const SERVER_AVAILABLE = typeof window.io === 'function';
+    const socket = SERVER_AVAILABLE ? io({
+      reconnection: true,
+      reconnectionAttempts: Infinity,
+      reconnectionDelay: 1000,
+      reconnectionDelayMax: 5000,
+      timeout: 20000
+    }) : { on() {}, emit() {}, connected: false };
+
+    const SHAPES = ['▲', '◆', '●', '■'];
+    const LETTERS = ['A', 'B', 'C', 'D'];
+
+    // Estado local
+    let myTeam = null;
+    let currentQuestion = null;
+    let currentOptions = [];
+    let myChoice = null;
+    let phase = 'board';
+    let countdownId = null;
+    let deadline = 0;
+    let durationMs = 40000;
+    let waitingStart = false;
+
+    const $ = (id) => document.getElementById(id);
+    const screenRegister = $('screen-register');
+    const screenBuzzer = $('screen-buzzer');
+    const screenPodium = $('screen-podium');
+    const formRegister = $('form-register');
+    const inputTeamName = $('input-team-name');
+
+    const headerAvatar = $('header-avatar');
+    const headerTeamName = $('header-team-name');
+    const headerScore = $('header-score');
+    const headerRank = $('header-rank');
+    const connText = $('conn-text');
+    const connBadge = $('conn-badge');
+
+    const panels = {
+      wait: $('panel-wait'),
+      preview: $('panel-preview'),
+      answer: $('panel-answer'),
+      result: $('panel-result')
+    };
+
+    function escapeHtml(str) {
+      return String(str ?? '').replace(/[&<>"']/g, c => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[c]));
+    }
+
+    function vibrate(pattern) {
+      if (navigator.vibrate) {
+        try { navigator.vibrate(pattern); } catch (e) {}
+      }
+    }
+
+    function showPanel(name) {
+      Object.entries(panels).forEach(([k, el]) => el.classList.toggle('hidden', k !== name));
+      document.querySelector('.buzzer-main').scrollTop = 0;
+    }
+
+    function showWait(msg) {
+      stopCountdown();
+      $('wait-text').textContent = msg || 'Atento a la pantalla del proyector...';
+      showPanel('wait');
+    }
+
+    // Clave de este celular: permite volver a entrar con el mismo nombre y conservar los puntos
+    let playerKey = '';
+    try { playerKey = localStorage.getItem('jeopardy_finanzas_key') || ''; } catch (e) {}
+    if (!playerKey) {
+      playerKey = Math.random().toString(36).slice(2) + Date.now().toString(36);
+      try { localStorage.setItem('jeopardy_finanzas_key', playerKey); } catch (e) {}
+    }
+
+    // Recuperar nombre previo de localStorage
+    try {
+      const savedName = localStorage.getItem('jeopardy_finanzas_team');
+      if (savedName) inputTeamName.value = savedName;
+    } catch (e) {}
+
+    socket.on('connect', () => {
+      connText.textContent = 'En vivo';
+      connBadge.classList.remove('offline');
+      if (myTeam && myTeam.name) {
+        socket.emit('join-game', { name: myTeam.name, key: playerKey });
+      }
+    });
+
+    socket.on('disconnect', () => {
+      connText.textContent = 'Reconectando…';
+      connBadge.classList.add('offline');
+    });
+
+    const registerError = $('register-error');
+    function showRegisterError(msg) {
+      registerError.textContent = msg;
+      registerError.classList.toggle('hidden', !msg);
+    }
+    if (!SERVER_AVAILABLE) {
+      showRegisterError('⚠️ No hay conexión con el servidor del juego. Escanea el código QR que aparece en el proyector.');
+    }
+    socket.on('connect_error', () => {
+      if (!myTeam) showRegisterError('⚠️ No se puede conectar con el servidor. Reintentando…');
+    });
+    socket.on('connect', () => showRegisterError(''));
+
+    // Registro del participante
+    formRegister.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = inputTeamName.value.trim();
+      if (!name) return;
+      if (!SERVER_AVAILABLE || !socket.connected) {
+        showRegisterError('⚠️ Aún no hay conexión con el servidor. Espera un momento e inténtalo de nuevo.');
+        return;
+      }
+      try { localStorage.setItem('jeopardy_finanzas_team', name); } catch (e2) {}
+      socket.emit('join-game', { name, key: playerKey });
+    });
+
+    // Nombre repetido: pedir otro
+    socket.on('join-error', ({ message }) => {
+      if (myTeam) return;
+      showRegisterError('⚠️ ' + message);
+      inputTeamName.focus();
+      inputTeamName.select();
+    });
+
+    socket.on('team-registered', ({ team, state }) => {
+      myTeam = team;
+      headerTeamName.textContent = myTeam.name;
+      headerAvatar.textContent = myTeam.name.substring(0, 2).toUpperCase();
+      headerAvatar.style.backgroundColor = myTeam.color || '#0080ff';
+      updateScore(state.teams);
+
+      showRegisterError('');
+      screenRegister.classList.add('hidden');
+      screenPodium.classList.add('hidden');
+      screenBuzzer.classList.remove('hidden');
+
+      // Sincronizar con el momento actual de la partida
+      phase = state.phase;
+      if (state.phase === 'preview' && state.question) {
+        showPreview({ ...state.question, opciones: state.opciones });
+      } else if (state.phase === 'answering' && state.question) {
+        currentQuestion = state.question;
+        durationMs = state.question.answerTimeMs || durationMs;
+        showOptions(state.opciones, state.remainingMs);
+        if (state.myAnswer) markSent(state.myAnswer.choice);
+      } else if (state.phase === 'reveal' && state.lastReveal) {
+        currentQuestion = state.question;
+        currentOptions = state.lastReveal.opciones;
+        showResult(state.lastReveal, state.teams, false);
+      } else {
+        showWait('Atento a la pantalla del proyector...');
+      }
+    });
+
+    function updateScore(teams) {
+      if (!myTeam || !teams || !teams[myTeam.id]) return;
+      myTeam = teams[myTeam.id];
+      headerScore.textContent = `${myTeam.score} pts`;
+      const list = Object.values(teams).sort((a, b) => b.score - a.score);
+      const pos = list.findIndex(t => t.id === myTeam.id) + 1;
+      headerRank.textContent = myTeam.score > 0 && pos > 0 ? `· ${pos}º lugar` : '';
+      return { pos, total: list.length };
+    }
+
+    socket.on('teams-updated', (teams) => updateScore(teams));
+
+    // Pregunta abierta en el proyector
+    socket.on('question-opened', (q) => {
+      phase = 'preview';
+      showPreview(q);
+    });
+
+    function showPreview(q) {
+      stopCountdown();
+      currentQuestion = q;
+      myChoice = null;
+      durationMs = q.answerTimeMs || durationMs;
+      $('preview-points').textContent = q.isFinal ? `🏆 Ronda final · hasta ${q.maxPoints} pts` : `Hasta ${q.maxPoints} pts`;
+      $('preview-question').textContent = q.pregunta;
+      if (q.opciones && q.opciones.length) {
+        // Las opciones se ven desde ya, pero bloqueadas hasta que el docente inicie
+        showOptions(q.opciones, durationMs, true);
+      } else {
+        showPanel('preview');
+      }
+    }
+
+    // Inicia el tiempo para responder
+    socket.on('answering-started', (data) => {
+      phase = 'answering';
+      durationMs = data.durationMs || durationMs;
+      showOptions(data.opciones, data.remainingMs);
+      vibrate([60]);
+      flashGo();
+    });
+
+    // Señal grande de "¡YA!" al desbloquear las respuestas
+    function flashGo() {
+      const el = document.createElement('div');
+      el.className = 'go-flash';
+      el.textContent = '¡YA!';
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 900);
+    }
+
+    function showOptions(opciones, remaining, waiting = false) {
+      currentOptions = opciones || [];
+      myChoice = null;
+      waitingStart = waiting;
+      $('answer-question').textContent = currentQuestion ? currentQuestion.pregunta : '';
+      const wrap = $('answer-options');
+      wrap.innerHTML = '';
+      currentOptions.forEach((texto, i) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `answer-btn opt-${i}`;
+        btn.dataset.index = i;
+        btn.innerHTML = `<span class="answer-shape">${SHAPES[i]}</span><span class="answer-text">${escapeHtml(texto)}</span>`;
+        btn.addEventListener('click', () => submitAnswer(i));
+        wrap.appendChild(btn);
+      });
+      wrap.classList.remove('locked');
+      wrap.classList.toggle('waiting', waiting);
+      [...wrap.children].forEach(btn => { btn.disabled = waiting; });
+      $('sent-notice').classList.add('hidden');
+      $('answer-progress').textContent = '';
+      $('wait-banner').classList.toggle('hidden', !waiting);
+      $('time-row').classList.toggle('hidden', waiting);
+      $('answer-points').textContent = currentQuestion
+        ? (currentQuestion.isFinal ? `🏆 Ronda final · hasta ${currentQuestion.maxPoints} pts` : `Hasta ${currentQuestion.maxPoints} pts`)
+        : '';
+      showPanel('answer');
+      if (waiting) {
+        stopCountdown();
+      } else {
+        startCountdown(remaining);
+      }
+    }
+
+    function submitAnswer(i) {
+      if (phase !== 'answering' || waitingStart || myChoice !== null) return;
+      myChoice = i;
+      vibrate([80]);
+      socket.emit('submit-answer', { choice: i });
+      markSent(i);
+    }
+
+    function markSent(i) {
+      myChoice = i;
+      const wrap = $('answer-options');
+      wrap.classList.add('locked');
+      [...wrap.children].forEach((btn, idx) => {
+        btn.classList.toggle('chosen', idx === i);
+        btn.disabled = true;
+      });
+      $('sent-notice').classList.remove('hidden');
+    }
+
+    socket.on('answer-accepted', ({ choice }) => markSent(choice));
+
+    socket.on('answer-progress', (p) => {
+      if (phase !== 'answering') return;
+      $('answer-progress').textContent = `${p.answered} de ${p.total} ya respondieron`;
+    });
+
+    function startCountdown(remaining) {
+      stopCountdown();
+      deadline = performance.now() + (remaining ?? durationMs);
+      const fill = $('time-fill');
+      const label = $('time-left');
+      const step = () => {
+        const left = Math.max(0, deadline - performance.now());
+        label.textContent = Math.ceil(left / 1000);
+        fill.style.width = `${(left / durationMs) * 100}%`;
+        fill.classList.toggle('hurry', left <= 5000);
+        if (left <= 0 && myChoice === null && phase === 'answering') {
+          const wrap = $('answer-options');
+          wrap.classList.add('locked');
+          [...wrap.children].forEach(btn => { btn.disabled = true; });
+          $('sent-notice').textContent = '⏰ Se acabó el tiempo';
+          $('sent-notice').classList.remove('hidden');
+        }
+        if (left > 0) countdownId = requestAnimationFrame(step);
+      };
+      $('sent-notice').textContent = '✓ Respuesta enviada. Espera el resultado…';
+      countdownId = requestAnimationFrame(step);
+    }
+
+    function stopCountdown() {
+      if (countdownId) cancelAnimationFrame(countdownId);
+      countdownId = null;
+    }
+
+    // Resultado de la pregunta
+    socket.on('question-revealed', (data) => {
+      phase = 'reveal';
+      showResult(data, data.teams, true);
+    });
+
+    function showResult(data, teams, live) {
+      stopCountdown();
+      const mine = myTeam ? data.results.find(r => r.teamId === myTeam.id) : null;
+      const card = $('result-card');
+      const rank = updateScore(teams) || {};
+
+      if (mine && mine.correct) {
+        card.className = 'result-card win';
+        $('result-icon').textContent = '✅';
+        $('result-title').textContent = '¡Correcto!';
+        $('result-points').textContent = `+${mine.points} pts`;
+        $('result-detail').textContent = `Respondiste en ${(mine.elapsedMs / 1000).toFixed(1)} s`;
+        if (live) vibrate([120, 60, 180]);
+      } else if (mine) {
+        card.className = 'result-card lose';
+        $('result-icon').textContent = '❌';
+        $('result-title').textContent = 'Incorrecto';
+        $('result-points').textContent = '+0 pts';
+        $('result-detail').textContent = `Elegiste ${SHAPES[mine.choice]} ${LETTERS[mine.choice]}. ¡En la siguiente!`;
+        if (live) vibrate([250]);
+      } else {
+        card.className = 'result-card timeout';
+        $('result-icon').textContent = '⏰';
+        $('result-title').textContent = 'Sin respuesta';
+        $('result-points').textContent = '+0 pts';
+        $('result-detail').textContent = 'Se acabó el tiempo.';
+      }
+
+      const ci = data.correctIndex;
+      const opciones = data.opciones || currentOptions;
+      $('result-correct').className = `correct-option opt-${ci}`;
+      $('result-correct').innerHTML = `<span class="answer-shape">${SHAPES[ci]}</span><span>${escapeHtml(opciones[ci] || '')}</span>`;
+      $('result-rank').textContent = rank.pos ? `Vas en ${rank.pos}º lugar de ${rank.total} · ${myTeam.score} pts` : '';
+      showPanel('result');
+    }
+
+    // Pregunta cerrada
+    socket.on('question-closed', () => {
+      phase = 'board';
+      showWait('Volviendo al tablero de producción...');
+    });
+
+    // Cierre de partida y Podio
+    socket.on('game-ended', ({ ranking }) => {
+      if (!myTeam || !ranking) return;
+      stopCountdown();
+
+      const found = ranking.find(t => t.id === myTeam.id || t.name.toLowerCase() === myTeam.name.toLowerCase());
+      const myRank = found ? found.rank : '?';
+      const myScore = found ? found.score : myTeam.score;
+
+      screenRegister.classList.add('hidden');
+      screenBuzzer.classList.add('hidden');
+
+      const podiumTrophy = $('podium-trophy');
+      const podiumStatusTitle = $('podium-status-title');
+      const podiumMyRank = $('podium-my-rank');
+      const podiumMyMsg = $('podium-my-msg');
+
+      $('podium-my-team').textContent = myTeam.name;
+      $('podium-my-score').textContent = `${myScore} pts`;
+      podiumMyRank.textContent = `${myRank}º LUGAR`;
+
+      if (myRank === 1) {
+        podiumTrophy.textContent = '🥇';
+        podiumStatusTitle.textContent = '¡CAMPEONES DE LA PRODUCCIÓN!';
+        podiumMyMsg.textContent = '¡Excelente aplicación del criterio Branch B! Aseguraron la solvencia y el éxito del proyecto.';
+        podiumMyRank.className = 'my-rank-badge rank-gold';
+      } else if (myRank === 2) {
+        podiumTrophy.textContent = '🥈';
+        podiumStatusTitle.textContent = '¡SUBCAMPEONES!';
+        podiumMyMsg.textContent = '¡Gran demostración de disciplina y trabajo en equipo en el set!';
+        podiumMyRank.className = 'my-rank-badge rank-silver';
+      } else if (myRank === 3) {
+        podiumTrophy.textContent = '🥉';
+        podiumStatusTitle.textContent = '¡TERCER LUGAR!';
+        podiumMyMsg.textContent = '¡Muy buena participación en el análisis de decisiones financieras!';
+        podiumMyRank.className = 'my-rank-badge rank-bronze';
+      } else {
+        podiumTrophy.textContent = '🎖️';
+        podiumStatusTitle.textContent = '¡GRAN PARTICIPACIÓN!';
+        podiumMyMsg.textContent = '¡Gracias por participar y reflexionar en la activación interactiva de Estudio A!';
+        podiumMyRank.className = 'my-rank-badge rank-other';
+      }
+
+      screenPodium.classList.remove('hidden');
+      vibrate([150, 80, 150, 80, 300]);
+    });
+
+    // Reinicio de partida
+    socket.on('game-reset', (data) => {
+      phase = 'board';
+      updateScore(data.teams);
+      screenPodium.classList.add('hidden');
+      if (myTeam) screenBuzzer.classList.remove('hidden');
+      showWait('¡Nueva partida iniciada! Atento a la pantalla...');
+    });
+  </script>
+</body>
+</html>

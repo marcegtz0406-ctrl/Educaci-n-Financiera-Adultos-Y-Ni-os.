@@ -1,0 +1,29 @@
+{
+  "name": "jeopardy-educacion-financiera",
+  "version": "1.0.0",
+  "description": "Jeopardy Interactivo: Educación Financiera - Estudio A (Branch A vs Branch B)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "qrcode": "^1.5.3",
+    "socket.io": "^4.7.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "jeopardy",
+    "educacion-financiera",
+    "socketio",
+    "uacm",
+    "gamification"
+  ],
+  "author": "UACM - Estudio A",
+  "license": "MIT",
+  "devDependencies": {
+    "socket.io-client": "^4.8.4"
+  }
+}

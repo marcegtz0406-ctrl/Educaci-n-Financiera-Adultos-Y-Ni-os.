@@ -1,0 +1,345 @@
+{
+  "titulo": "Jeopardy: Educación Financiera - Estudio A",
+  "subtitulo": "La Película de tu Vida: Branch A vs Branch B",
+  "descripcion": "Juego interactivo de toma de decisiones financieras basado en el dossier de producción 'El Set de Cine' (UACM).",
+  "categorias": [
+    {
+      "nombre": "1. Presupuesto y Flujo",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "¿Qué es un flujo de caja (cash flow) en una producción o proyecto de vida y por qué es vital antes de iniciar el rodaje?",
+          "opcion_branch_b": "Priorizar el registro diario de entradas y salidas para asegurar que nunca falte liquidez para insumos básicos.",
+          "opcion_branch_a": "Gastar el capital inicial en una gran fiesta de claquetazo y confiar en que el dinero llegará después.",
+          "respuesta": "El flujo de caja es el registro detallado de las entradas y salidas de dinero en un periodo. En una producción cinematográfica y en las finanzas personales, quedarse sin liquidez inmediata paraliza el proyecto, aunque existan ganancias proyectadas a futuro.",
+          "reflexion_ia": "El flujo de caja es el pulso cardíaco de tu proyecto. El dinero en papel no paga las cuentas de hoy. En la vida y en el set, quien no monitorea su liquidez diaria termina parando cámaras por falta de combustible básico.",
+          "distractores": [
+            "Calcular solo la ganancia total esperada al estreno, sin registrar cuándo entra y cuándo sale cada peso.",
+            "Revisar las cuentas una sola vez al final del rodaje para saber si hubo pérdidas o ganancias."
+          ]
+        },
+        {
+          "puntos": 200,
+          "pregunta": "Al recibir el presupuesto total asignado para la película, ¿cuál es el primer paso metodológico que debe realizar el productor?",
+          "opcion_branch_b": "Crear un presupuesto desglosado por departamentos técnicos, asignando techos de gasto y fondos de reserva obligatorios.",
+          "opcion_branch_a": "Comprar de inmediato la cámara más cara del mercado para presumir tecnología de punta al equipo.",
+          "respuesta": "El desglose presupuestario divide el monto total en partidas específicas (arte, sonido, fotografía, catering, nómina y contingencia). Esto evita que un departamento consuma los recursos indispensables de los demás.",
+          "reflexion_ia": "Dividir para vencer. Un presupuesto no es una restricción a tu creatividad, sino el mapa que garantiza que llegues al final de la historia con todos los departamentos a salvo.",
+          "distractores": [
+            "Repartir el dinero en partes iguales entre todos los departamentos sin analizar lo que necesita cada uno.",
+            "Pagar por adelantado todos los sueldos del equipo y decidir el resto de los gastos sobre la marcha."
+          ]
+        },
+        {
+          "puntos": 300,
+          "pregunta": "¿Por qué los costos imprevistos u 'ocultos' en la preproducción son los principales causantes de déficits financieros?",
+          "opcion_branch_b": "Identificar trámites, permisos de locación, seguros y mantenimiento preventivo antes de firmar contratos.",
+          "opcion_branch_a": "Ignorar permisos legales y destinar ese dinero a rentar un camerino rodante de lujo para el director.",
+          "respuesta": "Los costos ocultos (permisos municipales, licencias musicales, horas extras, estacionamiento de unidades) suelen ignorarse por optimismo ingenuo. Si no se calculan, consumen el capital de trabajo y detienen la filmación con multas o clausuras.",
+          "reflexion_ia": "Los gastos invisibles son los que hunden los barcos más grandes. Planear con rigor legal y técnico salva más películas que cualquier golpe de suerte.",
+          "distractores": [
+            "Suponer que los gastos menores se compensarán solos con descuentos de proveedores durante el rodaje.",
+            "Presupuestar solo cámaras, actores y locaciones, porque lo demás 'son detalles que se arreglan después'."
+          ]
+        },
+        {
+          "puntos": 400,
+          "pregunta": "La producción lleva el 40% del rodaje y ya ha consumido el 65% de los fondos. ¿Qué decisión de flujo de caja debe tomarse de inmediato?",
+          "opcion_branch_b": "Auditar el balance, congelar gastos prescindibles, renegociar llamados y reestructurar el cronograma de rodaje.",
+          "opcion_branch_a": "Organizar una cena VIP para inversionistas con la esperanza de que inyecten más capital por simpatía.",
+          "respuesta": "Se debe aplicar un plan de contingencia: recortar jornadas innecesarias, reajustar escenas complejas, auditar fugas de dinero y priorizar el cumplimiento salarial del crew básico para no detener el rodaje.",
+          "reflexion_ia": "Cuando el agua sube, soltar el lastre superfluo no es derrota: es liderazgo financiero. Proteger a tu equipo y la filmación esencial siempre es la prioridad absoluta.",
+          "distractores": [
+            "Seguir filmando al mismo ritmo y pedir un préstamo urgente en cuanto el dinero se termine.",
+            "Recortar parejo un 25% a todos los departamentos sin revisar dónde está realmente el exceso de gasto."
+          ]
+        },
+        {
+          "puntos": 500,
+          "pregunta": "¿Cómo se calcula y qué representa la Tasa de Quema de Efectivo (Burn Rate) en una iniciativa independiente?",
+          "opcion_branch_b": "Medir cuánto dinero neto se gasta por semana para conocer la fecha exacta en que se agotará la liquidez disponible.",
+          "opcion_branch_a": "Gastar al ritmo que imponga el entusiasmo del rodaje sin calcular cuántos días de solvencia restan.",
+          "respuesta": "El Burn Rate mide la velocidad a la que una entidad gasta su reserva de efectivo en un periodo de tiempo. Permite calcular el 'runway' (tiempo de vida disponible antes de que la caja quede en cero), permitiendo corregir el rumbo con anticipación.",
+          "reflexion_ia": "Tu velocidad de quema determina cuánto aire te queda bajo el agua. En finanzas, quien sabe cuándo se le acaba el oxígeno nunca se ahoga sin un plan de escape.",
+          "distractores": [
+            "Sumar todo lo gastado desde el inicio y compararlo con lo que gastó otra película parecida.",
+            "Contar cuánto dinero entra cada semana por patrocinios, sin considerar lo que sale."
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "2. Deseos vs Necesidades",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "En el contexto de la producción 'El Set de Cine', ¿cuál es la distinción fundamental entre un deseo y una necesidad?",
+          "opcion_branch_b": "Cubrir las raciones alimenticias y agua del crew técnico, sin las cuales la filmación colapsa físicamente.",
+          "opcion_branch_a": "Contratar un servicio gourmet de sushi importado para la mesa del protagonista porque 'se ve más profesional'.",
+          "respuesta": "Una necesidad es un elemento esencial para la supervivencia, operatividad o función básica del proyecto (alimento, transporte, equipo de cámara operativo). Un deseo es un gusto o preferencia subjetiva que puede suprimirse sin frenar el objetivo.",
+          "reflexion_ia": "Confundir un antojo con una necesidad es el inicio de la bancarrota. Las necesidades sostienen la estructura; los deseos son adornos que solo se pagan cuando los cimientos están sólidos.",
+          "distractores": [
+            "Considerar necesidad todo lo que el equipo pide con insistencia y deseo lo que nadie reclama.",
+            "Considerar necesidad cualquier compra que tenga descuento, porque así se ahorra dinero."
+          ]
+        },
+        {
+          "puntos": 200,
+          "pregunta": "Al elegir locaciones, ¿cómo se manifiesta la trampa psicológica de los 'gastos de estatus' (Branch A)?",
+          "opcion_branch_b": "Rentar un foro funcional y económico con excelente acústica y corriente eléctrica regulada.",
+          "opcion_branch_a": "Pagar una mansión carísima en una zona residencial exclusiva solo para sacarse fotos para redes sociales.",
+          "respuesta": "Los gastos de estatus buscan aprobación externa y apariencias antes que utilidad funcional. Gastar en lujo superficial agota el presupuesto sin mejorar la calidad técnica ni el rendimiento de la inversión.",
+          "reflexion_ia": "El ego es el peor asesor financiero. Cuando compras para impresionar a quienes no les importas, terminas endeudado y con las manos vacías ante las verdaderas emergencias.",
+          "distractores": [
+            "Elegir la locación más barata disponible aunque no tenga corriente eléctrica ni permisos de filmación.",
+            "Rentar la locación donde se filmó una película famosa, aunque rebase el presupuesto, para atraer prensa."
+          ]
+        },
+        {
+          "puntos": 300,
+          "pregunta": "¿Qué es la 'Regla del 50-30-20' aplicada a las finanzas personales y a una empresa unipersonal?",
+          "opcion_branch_b": "Destinar 50% a necesidades básicas, 30% a deseos o flexibilidad, y 20% obligatorio a ahorro e inversión.",
+          "opcion_branch_a": "Destinar 80% a deseos inmediatos y ropa de diseñador, 20% a deudas mínimas y 0% a ahorro.",
+          "respuesta": "Es un modelo de distribución donde el 50% del ingreso neto cubre necesidades básicas indispensables, el 30% se reserva para deseos o estilo de vida personal, y el 20% va directo a fondo de emergencia, amortización de deuda o inversión productiva.",
+          "reflexion_ia": "La disciplina en la distribución es libertad financiera. Si no le pones límites a tus deseos hoy, tus necesidades de mañana serán pagadas con angustia.",
+          "distractores": [
+            "Destinar 50% a ahorro e inversión, 30% a deseos y 20% a necesidades básicas.",
+            "Destinar 50% a pagar deudas, 30% a necesidades y 20% a entretenimiento, sin apartar ahorro."
+          ]
+        },
+        {
+          "puntos": 400,
+          "pregunta": "Un patrocinador entrega $50,000 adicionales no contemplados. ¿Cómo actúa un gestor financiero con criterio Branch B?",
+          "opcion_branch_b": "Asegurar el fondo de imprevistos, liquidar pasivos pendientes y reforzar el equipo de iluminación crítico.",
+          "opcion_branch_a": "Repartir el dinero como bono inmediato entre los directores para comprar gadgets de última generación.",
+          "respuesta": "El dinero extraordinario (ingreso windfall) debe canalizarse a fortalecer la liquidez de contingencia o amortizar costos clave que aumenten la resiliencia del proyecto antes de aumentar el gasto corriente o superfluo.",
+          "reflexion_ia": "Los ingresos inesperados son pruebas de fuego para tu carácter. Quien despilfarra el excedente en tiempos de abundancia, llora la escasez en el primer contratiempo.",
+          "distractores": [
+            "Guardar todo el dinero sin tocarlo, aunque falte equipo crítico para terminar la película.",
+            "Usarlo para agregar escenas y efectos especiales que no estaban contemplados en el guion original."
+          ]
+        },
+        {
+          "puntos": 500,
+          "pregunta": "¿Cómo impacta la 'inflación del estilo de vida' (lifestyle creep) en la viabilidad de un realizador independiente?",
+          "opcion_branch_b": "Mantener una estructura de costos operativos sobria a medida que aumentan los ingresos para multiplicar el ahorro neto.",
+          "opcion_branch_a": "Aumentar automáticamente los gastos en viajes, restaurantes de lujo y accesorios cada vez que se cobra un proyecto.",
+          "respuesta": "La inflación de estilo de vida ocurre cuando los gastos superfluos crecen al mismo ritmo o más rápido que los ingresos, impidiendo acumular riqueza o patrimonio y dejando al profesional vulnerable a cualquier paro laboral.",
+          "reflexion_ia": "No importa cuánto ganes si tu apetito por los lujos crece más rápido que tus bolsillos. La verdadera riqueza se mide en el tiempo que puedes vivir con dignidad sin trabajar.",
+          "distractores": [
+            "Es positivo: gastar más cada vez que se gana más demuestra éxito y atrae mejores contratos.",
+            "Solo afecta a quien gana poco; con ingresos altos, el gasto extra se compensa solo."
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "3. Fondo de Emergencia",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "¿Qué es un fondo de emergencia o de contingencia y cuánto suele reservarse en un presupuesto estándar?",
+          "opcion_branch_b": "Apartar entre un 10% y 15% del presupuesto total exclusivamente para imprevistos no planificados.",
+          "opcion_branch_a": "Gastar el 100% del dinero desde el día 1 asumiendo que nada puede salir mal durante la filmación.",
+          "respuesta": "El fondo de emergencia es una reserva financiera intocable destinada a responder ante imprevistos críticos (clima adverso, averías mecánicas, accidentes leves). En producción y en finanzas personales se aconseja entre el 10% y el 20% o de 3 a 6 meses de gastos.",
+          "reflexion_ia": "Un fondo de emergencia no es dinero ocioso: es tu chaleco salvavidas. El optimismo no es una estrategia financiera; la prevención sí lo es.",
+          "distractores": [
+            "Apartar alrededor del 1% del presupuesto, porque los imprevistos casi nunca ocurren.",
+            "No apartar nada y pedir un préstamo en el momento en que ocurra el imprevisto."
+          ]
+        },
+        {
+          "puntos": 200,
+          "pregunta": "En pleno rodaje exterior se desata una tormenta eléctrica que obliga a suspender la filmación 2 días. ¿Qué salva al proyecto?",
+          "opcion_branch_b": "Tener liquidez en el fondo de contingencia para pagar las horas de espera y reagendar permisos sin quebrar.",
+          "opcion_branch_a": "Haberse gastado el margen en fuegos artificiales decorativos que ahora están mojados e inservibles.",
+          "respuesta": "El fondo de contingencia permite absorber los costos fijos de un día de filmación cancelado (renta de camiones, catering mínimo, reprogramación) sin paralizar indefinidamente la producción ni incumplir compromisos.",
+          "reflexion_ia": "La naturaleza y los accidentes no piden permiso para aparecer. El productor prudente no reza para que no llueva; tiene el paraguas presupuestal listo.",
+          "distractores": [
+            "Pedir al equipo que trabaje esos días sin pago para no afectar el presupuesto.",
+            "Filmar bajo la tormenta para no perder días, aunque se arriesgue el equipo técnico y al personal."
+          ]
+        },
+        {
+          "puntos": 300,
+          "pregunta": "¿Cuál es la regla de oro para el almacenamiento del fondo de emergencia en términos de disponibilidad y riesgo?",
+          "opcion_branch_b": "Mantenerlo en instrumentos de muy alta liquidez y bajo riesgo (disponibilidad en 24-48 horas sin volatilidad).",
+          "opcion_branch_a": "Meter el dinero en criptomonedas especulativas o apuestas deportivas para ver si se multiplica en una semana.",
+          "respuesta": "El fondo de emergencia debe priorizar la liquidez inmediata y la preservación de capital, no la especulación. No debe estar invertido en activos volátiles ni bloqueado a plazos forzosos largos.",
+          "reflexion_ia": "El dinero de seguridad no es para apostar en la ruleta. Su trabajo no es hacerte millonario de la noche a la mañana, sino evitar que seas pobre cuando la tormenta golpee.",
+          "distractores": [
+            "Invertirlo a plazo fijo a 5 años con buen rendimiento, aunque no se pueda retirar antes.",
+            "Guardarlo en efectivo dentro del set, a la mano de cualquier persona del equipo."
+          ]
+        },
+        {
+          "puntos": 400,
+          "pregunta": "Un actor principal sufre un esguince en el set. ¿Por qué el seguro de responsabilidad civil es una necesidad y no un gasto?",
+          "opcion_branch_b": "Cubre atención médica inmediata y previene demandas legales millonarias que clausurarían la empresa.",
+          "opcion_branch_a": "Ahorrarse la póliza del seguro para pagarle un traje exclusivo de sastre de alta costura al coprotagonista.",
+          "respuesta": "Los seguros son mecanismos de transferencia de riesgo. Pagar una prima predecible evita pérdidas catastróficas imprevistas que superarían con creces el presupuesto total del proyecto.",
+          "reflexion_ia": "Los seguros parecen caros solo hasta el segundo exacto en que los necesitas. Transferir el riesgo catastrófico es el acto de madurez financiera más inteligente.",
+          "distractores": [
+            "Pagar la atención médica directamente de la caja cuando ocurra un accidente, ya que son poco frecuentes.",
+            "Pedir a cada actor que contrate su propio seguro para que la productora no asuma ninguna responsabilidad."
+          ]
+        },
+        {
+          "puntos": 500,
+          "pregunta": "¿Cómo se reconstituye el fondo de emergencia una vez que ha sido utilizado legítimamente ante una crisis?",
+          "opcion_branch_b": "Reasignar como prioridad número uno de los siguientes ingresos la reposición completa del fondo antes de cualquier nuevo gasto.",
+          "opcion_branch_a": "Celebrar que se sobrevivió a la crisis y volver a gastar sin reponer el dinero gastado.",
+          "respuesta": "Tras sortear una emergencia, la reposición del fondo debe convertirse en la prioridad máxima del flujo de caja entrante, postergando planes de expansión o compras prescindibles hasta recuperar el nivel de seguridad óptimo.",
+          "reflexion_ia": "Un extintor vacío no apaga un segundo incendio. Reparar tu blindaje después de la batalla es lo que te mantiene en pie para el siguiente desafío.",
+          "distractores": [
+            "Esperar a que sobre dinero a fin de año para reponerlo, si es que sobra.",
+            "Pedir un préstamo para rellenar el fondo de inmediato y seguir gastando igual que antes."
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "4. Crédito y Deuda",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "¿Cuál es la diferencia sustancial entre 'Deuda Buena' (apalancamiento productivo) y 'Deuda Mala' de consumo?",
+          "opcion_branch_b": "Financiar equipo técnico o insumos de rodaje que generarán ingresos y valor patrimonial tangible.",
+          "opcion_branch_a": "Endeudarse a meses con intereses altos en una tarjeta de crédito para comprar bebidas importadas en el estreno.",
+          "respuesta": "La deuda buena se utiliza para adquirir activos o financiar actividades que generan ingresos superiores al costo del financiamiento. La deuda mala financia bienes de consumo que pierden valor instantáneamente y acumulan intereses gravosos.",
+          "reflexion_ia": "La deuda es como el fuego: si la dominas para forjar herramientas, construye tu futuro; si la usas para quemar billetes en caprichos, consume tu propia casa.",
+          "distractores": [
+            "Considerar buena cualquier deuda cuya mensualidad sea baja, sin importar en qué se use el dinero.",
+            "Pedir un préstamo nuevo para pagar otro que ya venció, sin cambiar los hábitos de gasto."
+          ]
+        },
+        {
+          "puntos": 200,
+          "pregunta": "¿Qué representa el CAT (Costo Anual Total) y por qué nunca debe ignorarse al solicitar un crédito?",
+          "opcion_branch_b": "Evaluar la cifra real que incluye tasa de interés, comisiones de apertura, seguros obligatorios y gastos anuales.",
+          "opcion_branch_a": "Fijarse únicamente en que la mensualidad 'se vea chiquita' en el volante publicitario sin leer las letras pequeñas.",
+          "respuesta": "El CAT es una medida estandarizada porcentual que incorpora todos los costos inherentes del crédito (tasa de interés pura, comisiones, seguros, avales). Permite comparar con transparencia qué crédito es verdaderamente más costoso.",
+          "reflexion_ia": "La letra chiquita es donde se esconde la verdadera trampa. En finanzas, quien solo mira el pago mensual termina pagando tres veces el precio del bien.",
+          "distractores": [
+            "Comparar solo la tasa de interés anunciada, sin sumar comisiones ni seguros obligatorios.",
+            "Elegir el crédito que se aprueba más rápido, sin importar cuánto cueste en total."
+          ]
+        },
+        {
+          "puntos": 300,
+          "pregunta": "¿Qué significa caer en la trampa del 'Pago Mínimo' en una tarjeta de crédito?",
+          "opcion_branch_b": "Pagar siempre el saldo total para no generar intereses (ser 'totalero') y usar el crédito solo como medio de pago.",
+          "opcion_branch_a": "Abonar solo el pago mínimo mensual y seguir tarjeteando lujos hasta topar el límite crediticio.",
+          "respuesta": "El pago mínimo cubre principalmente intereses y comisiones bancarias, amortizando casi nada al capital de la deuda. Mantener esta conducta puede alargar una deuda pequeña durante décadas y multiplicar exponencialmente su costo.",
+          "reflexion_ia": "El pago mínimo es la trampa perfecta para mantenerte en cautiverio financiero. Los bancos aman a quienes pagan el mínimo; los que construyen futuro pagan la totalidad.",
+          "distractores": [
+            "Pagar siempre el mínimo, porque así se cuida el historial crediticio sin generar intereses.",
+            "Pagar solo cuando llama el área de cobranza, para no tener dinero inmovilizado en la tarjeta."
+          ]
+        },
+        {
+          "puntos": 400,
+          "pregunta": "Entre el 'Método Bola de Nieve' y el 'Método Avalancha' para salir de deudas múltiples, ¿cuál es la lógica del método avalancha?",
+          "opcion_branch_b": "Pagar con agresividad la deuda con la tasa de interés más alta (CAT más elevado) para minimizar el costo financiero total.",
+          "opcion_branch_a": "Ignorar los intereses y pagar aleatoriamente la tarjeta que tenga el plástico con el diseño más bonito.",
+          "respuesta": "El método avalancha prioriza liquidar primero la deuda con la mayor tasa de interés (manteniendo pagos mínimos en las demás). Matemáticamente es el método más eficiente porque ahorra la mayor cantidad de dinero en intereses.",
+          "reflexion_ia": "Atacar a la deuda más voraz primero es estrategia pura. Cortarle la cabeza al monstruo con los intereses más afilados acelera tu regreso a la libertad financiera.",
+          "distractores": [
+            "Pagar primero la deuda con el saldo más pequeño para ganar motivación con cada deuda liquidada.",
+            "Dividir el dinero disponible en partes iguales entre todas las deudas, sin importar su tasa de interés."
+          ]
+        },
+        {
+          "puntos": 500,
+          "pregunta": "¿Cómo calcula un banco tu Capacidad de Endeudamiento y cuál es el porcentaje máximo saludable recomendado de tus ingresos?",
+          "opcion_branch_b": "Mantener la suma de todas las deudas mensuales por debajo del 30% a 35% del ingreso neto disponible.",
+          "opcion_branch_a": "Comprometer el 80% del sueldo en abonos con tal de estrenar auto del año y accesorios de alta gama.",
+          "respuesta": "La capacidad de endeudamiento es el porcentaje del ingreso neto que puede destinarse a amortizaciones de pasivos sin poner en riesgo la cobertura de necesidades básicas. El umbral máximo recomendado por instituciones financieras es entre el 30% y 35%.",
+          "reflexion_ia": "Si tus deudas devoran más de un tercio de lo que ganas, ya no estás trabajando para tus sueños: estás trabajando para pagarle la vida a tus acreedores.",
+          "distractores": [
+            "Mantener las deudas mensuales por debajo del 60% del ingreso, mientras alcance para los gastos básicos.",
+            "Pedir todo el crédito que autorice el banco, porque si lo aprueban significa que sí se puede pagar."
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "5. Inversión y Futuro",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "pregunta": "¿Qué es el Retorno sobre la Inversión (ROI) y cómo se aplica al concluir una producción cinematográfica?",
+          "opcion_branch_b": "Medir el porcentaje de ganancia o beneficio generado en taquilla y distribución en relación con el capital total invertido.",
+          "opcion_branch_a": "Presumir cuántos aplausos hubo en la sala sin importar si se perdió hasta el último centavo del presupuesto.",
+          "respuesta": "El ROI calcula la rentabilidad: [(Beneficio Neto - Inversión) / Inversión] x 100. Permite saber si el proyecto generó valor económico real que permita financiar la siguiente producción con independencia.",
+          "reflexion_ia": "Los aplausos alimentan el ego por un minuto, pero el retorno sobre la inversión es lo que te permite encender las luces del estudio para tu siguiente película.",
+          "distractores": [
+            "Sumar todo el dinero que ingresó en taquilla, sin restar lo que costó producir la película.",
+            "Comparar el presupuesto de esta película con el de otras del mismo género."
+          ]
+        },
+        {
+          "puntos": 200,
+          "pregunta": "¿Qué es el Interés Compuesto y por qué Albert Einstein lo llamaba 'la octava maravilla del mundo'?",
+          "opcion_branch_b": "Invertir rendimientos de forma continua para que los intereses generen nuevos intereses a lo largo del tiempo.",
+          "opcion_branch_a": "Retirar y gastar cada centavo de rendimiento apenas aparece en compras impulsivas de fin de semana.",
+          "respuesta": "El interés compuesto se genera cuando los intereses devengados se reinvierten en el capital inicial, produciendo un crecimiento exponencial con el paso de los años. Es el motor principal de la acumulación de patrimonio a largo plazo.",
+          "reflexion_ia": "El tiempo y la paciencia son tus mayores aliados. En el interés compuesto, la constancia modesta vence a los golpes de suerte esporádicos todas las veces.",
+          "distractores": [
+            "Ganar siempre el mismo interés fijo sobre el capital inicial, sin que los intereses generen nuevos intereses.",
+            "Recibir un rendimiento que se duplica cada año, sin importar el plazo ni el monto invertido."
+          ]
+        },
+        {
+          "puntos": 300,
+          "pregunta": "¿Por qué la diversificación de ingresos es la mejor estrategia contra la volatilidad de la industria cultural y creativa?",
+          "opcion_branch_b": "Combinar proyectos de autor con servicios comerciales, docencia, derechos de autor y activos financieros estables.",
+          "opcion_branch_a": "Apostar toda la supervivencia a que un solo guion gane un premio internacional millonario sin tener plan B.",
+          "respuesta": "La diversificación ('no poner todos los huevos en la misma canasta') mitiga el riesgo de caídas en un sector específico. Si un proyecto se retrasa, otras fuentes de ingresos sostienen los gastos operativos.",
+          "reflexion_ia": "Quien depende de un solo grifo de agua se muere de sed cuando se seca la tubería. Crea múltiples canales de valor para que tu creatividad jamás sea rehén de la urgencia económica.",
+          "distractores": [
+            "Concentrar todos los ahorros en una sola inversión 'segura' para no complicarse.",
+            "Dejar por completo los proyectos de autor y trabajar únicamente en proyectos comerciales."
+          ]
+        },
+        {
+          "puntos": 400,
+          "pregunta": "¿Cuál es la diferencia entre un 'Activo' y un 'Pasivo' según los principios de educación financiera moderna?",
+          "opcion_branch_b": "Un activo pone dinero en tu bolsillo (genera flujo o plusvalía); un pasivo saca dinero de tu bolsillo constantemente.",
+          "opcion_branch_a": "Creer que comprar un auto deportivo para el director es un gran activo aunque consuma gasolina y seguro impagables.",
+          "respuesta": "Un activo es cualquier recurso con valor económico que produce ingresos o flujos futuros (rentas, derechos de autor, licencias, acciones). Un pasivo genera salidas continuas de dinero (mantenimiento, depreciación, deudas sin retorno).",
+          "reflexion_ia": "Aprende a distinguir qué te alimenta y qué te devora. Los ricos adquieren activos que trabajan para ellos; los ingenuos compran pasivos creyendo que son símbolos de riqueza.",
+          "distractores": [
+            "Un activo es todo lo que tiene un precio de compra alto; un pasivo es todo lo que cuesta poco.",
+            "Un activo es todo lo que te pertenece, aunque cada mes te cueste dinero mantenerlo."
+          ]
+        },
+        {
+          "puntos": 500,
+          "pregunta": "Al finalizar el proyecto con utilidades netas positivas, ¿cuál es la decisión estratégica de reinversión para asegurar sostenibilidad?",
+          "opcion_branch_b": "Destinar una porción fija al capital de trabajo del siguiente proyecto, actualización tecnológica y fondos de retiro.",
+          "opcion_branch_a": "Despilfarrar las utilidades en un viaje exótico en primera clase dejando la caja de la productora en ceros.",
+          "respuesta": "La reinversión estratégica de utilidades crea un ciclo virtuoso de crecimiento autosustentable. Permite financiar proyectos subsecuentes con menor dependencia de créditos caros y asegura la longevidad profesional de la empresa.",
+          "reflexion_ia": "El éxito de hoy es el abono de tu cosecha de mañana. Si te comes todas las semillas tras la primera buena temporada, la próxima sequía acabará con tu huerto.",
+          "distractores": [
+            "Reinvertir el 100% de las utilidades en un solo proyecto nuevo, más grande y más arriesgado.",
+            "Dejar las utilidades en la cuenta de la productora sin plan ni destino definido."
+          ]
+        }
+      ]
+    }
+  ],
+  "final_jeopardy": {
+    "categoria": "🎬 EL CORTE FINAL (TAKEAWAY): DECISIÓN MAESTRA",
+    "pregunta": "Tienes en tus manos el corte definitivo de tu película y una distribuidora te ofrece una suma atractiva. Sin embargo, tus cuentas revelan que tomaste decisiones de Branch A durante la mitad del rodaje y Branch B durante la otra. ¿Cuál es la lección suprema de 'El Set de Cine' sobre cómo el árbol de decisiones financieras define el destino de un proyecto?",
+    "opcion_branch_b": "Branch B demostró que asegurar los requerimientos operativos básicos y la estabilidad del equipo genera la disciplina y liquidez necesarias para que el proyecto llegue a término y pueda reinvertirse.",
+    "opcion_branch_a": "Branch A demostró que priorizar impulsos, apariencias y deseos superficiales genera baches de liquidez, estrés operativo y riesgo inminente de quiebra ante cualquier plot twist.",
+    "respuesta_esperada": "La gestión financiera no se trata de privarse de la creatividad o el disfrute, sino de entender el orden estratégico: primero se blindan las necesidades básicas, la solvencia operativa y las contingencias (Branch B). Una vez garantizada la estabilidad, los deseos y recompensas pueden disfrutarse con tranquilidad sin poner en peligro la existencia del proyecto ni el bienestar de las personas.",
+    "reflexion_ia": "En la película de tu vida, tú eres el productor ejecutivo y el guionista de tus decisiones. Cada peso que gastas es un voto por el tipo de futuro que estás construyendo. Si eliges la disciplina de Branch B, tendrás la solvencia y la libertad para filmar tantas historias como tus sueños alcancen. ¡Felicitaciones por completar el reto financiero de Estudio A!",
+    "distractores": [
+      "El éxito de un proyecto depende sobre todo de la suerte y del talento, no de las decisiones financieras.",
+      "Lo mejor es no gastar nunca en deseos ni recompensas, aunque la estabilidad del proyecto ya esté asegurada."
+    ]
+  },
+  "instrucciones_formato": "Cada pregunta tiene 4 opciones: 'opcion_branch_b' es SIEMPRE la correcta; 'opcion_branch_a' y las dos de 'distractores' son incorrectas. El juego las mezcla en orden aleatorio en cada partida."
+}
